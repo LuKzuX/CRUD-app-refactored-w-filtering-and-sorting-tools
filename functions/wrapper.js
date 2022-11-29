@@ -1,7 +1,7 @@
 const wrapper =  (fn) => {
   return async (req, res, next) => {
     try {
-      await fn(req, res, next);
+      await fn(req, res, next);  //the fn function is the promise we wait
     } catch (error) {
         next(error)
     }
